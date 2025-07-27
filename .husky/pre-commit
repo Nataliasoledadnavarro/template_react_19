@@ -1,0 +1,7 @@
+echo "🔍 Ejecutando validaciones pre-commit..."
+
+# Validar mensaje de commit (se ejecutará en commit-msg hook)
+echo "📝 Ejecutando lint-staged..."
+npx lint-staged
+
+echo "✅ Pre-commit completado"

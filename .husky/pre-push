@@ -1,0 +1,19 @@
+echo "🔍 Ejecutando validaciones pre-push..."
+
+# Validar nombre de rama
+echo "🌿 Validando nombre de rama..."
+node scripts/validate-branch-name.js
+
+# Ejecutar linting
+echo "🔍 Ejecutando ESLint..."
+npm run lint
+
+# Verificar formato
+echo "💅 Verificando formato con Prettier..."
+npm run format:check
+
+# Ejecutar build
+echo "🏗️ Ejecutando build..."
+npm run build
+
+echo "✅ Pre-push completado - listo para push!"
