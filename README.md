@@ -22,11 +22,17 @@ La estructura está organizada por feature y pensada para crecer sin volverse ca
 
 src/
 ├── app/ → Entry point, layout general y rutas
+
 ├── components/ → Comunes y UI reutilizables
+
 ├── features/ → Dominio por funcionalidad (auth, dashboard, etc.)
+
 ├── lib/ → Hooks, helpers, constantes
+
 ├── styles/ → Estilos globales y temas
+
 ├── types/ → Tipos globales
+
 ├── assets/ → Imágenes, íconos, etc.
 
 ## 🔧 Tech stack
@@ -43,10 +49,10 @@ src/
 
 ## ▶️ Cómo levantar el proyecto
 
-```bash
+
 npm install
 npm run dev
-Abre tu navegador en http://localhost:3000
+Abri tu navegador en http://localhost:3000
 
 🧪 Scripts útiles
 bash
@@ -56,6 +62,7 @@ npm run lint        # Corre ESLint
 npm run lint:fix    # Arregla errores de lint automáticamente
 npm run format      # Formatea con Prettier
 npm run build       # Compila para producción
+
 🧩 ¿Cómo sumar un nuevo feature?
 Creá tu módulo dentro de src/features/ (ej: users, settings)
 
@@ -80,4 +87,4 @@ Porque después de empezar 100 veces desde cero, decidí armar una base sólida 
 📬 ¿Te sirvió?
 Si querés usarlo, clonalo y adaptalo como gustes.
 Y si te gusta, ⭐️ siempre se agradece :)
-```
+
