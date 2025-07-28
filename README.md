@@ -1,69 +1,83 @@
-# React + TypeScript + Vite
+# ⚛️ React 19 + Vite + TypeScript + PrimeReact Starter Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hola 👋 Soy Naty y este es mi template base para nuevos proyectos en React. Lo armé con una estructura escalable, buenas prácticas desde el inicio y herramientas que usare en mis proyectos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 ¿Para qué sirve este template?
 
-## Expanding the ESLint configuration
+Este repo está pensado como punto de partida para:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Proyectos frontend en React con arquitectura modular
+- Armar una app rápida con Vite y TypeScript
+- Usar componentes estilizados con PrimeReact
+- Mantener el código limpio con Prettier + ESLint + Husky
+- Crear un entorno listo para escalar en equipo o individualmente
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🧱 Estructura del proyecto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+La estructura está organizada por feature y pensada para crecer sin volverse caótica:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+src/
+├── app/ → Entry point, layout general y rutas
+├── components/ → Comunes y UI reutilizables
+├── features/ → Dominio por funcionalidad (auth, dashboard, etc.)
+├── lib/ → Hooks, helpers, constantes
+├── styles/ → Estilos globales y temas
+├── types/ → Tipos globales
+├── assets/ → Imágenes, íconos, etc.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔧 Tech stack
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- ⚛️ **React 19**
+- ⚡ **Vite 5**
+- 📘 **TypeScript**
+- 🎨 **PrimeReact**, **PrimeFlex**, **PrimeIcons**
+- 🧹 **Prettier + ESLint + Husky + lint-staged**
+- 🔗 **React Router DOM v6.30+**
+- 🛠️ **Alias configurados (`@`, `@components`, etc.)**
+
+---
+
+## ▶️ Cómo levantar el proyecto
+
+```bash
+npm install
+npm run dev
+Abre tu navegador en http://localhost:3000
+
+🧪 Scripts útiles
+bash
+Copiar
+Editar
+npm run lint        # Corre ESLint
+npm run lint:fix    # Arregla errores de lint automáticamente
+npm run format      # Formatea con Prettier
+npm run build       # Compila para producción
+🧩 ¿Cómo sumar un nuevo feature?
+Creá tu módulo dentro de src/features/ (ej: users, settings)
+
+Agregá las subcarpetas que necesites: pages/, components/, services/, etc.
+
+Sumá tu nueva ruta en src/app/routes.tsx
+
+Ya podés mostrarla dentro del MainLayout
+
+📝 Extras configurados
+.editorconfig para mantener estilo de archivos en cualquier editor
+
+.prettierrc para formato automático
+
+.gitignore y .prettierignore bien afinados
+
+Hooks de Husky para evitar commits con código sucio
+
+👩‍💻 ¿Por qué este template?
+Porque después de empezar 100 veces desde cero, decidí armar una base sólida que realmente funcione, ordene el desarrollo y ahorre tiempo. Esta idea nace también de una necesidad identificada en mi equipo de trabajo: estandarizar buenas prácticas y optimizar el tiempo de inicio de nuevos proyectos. Ahora lo usare tanto para proyectos personales como para pruebas técnicas y futuros clientes.
+
+📬 ¿Te sirvió?
+Si querés usarlo, clonalo y adaptalo como gustes.
+Y si te gusta, ⭐️ siempre se agradece :)
 ```
