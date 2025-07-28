@@ -20,7 +20,7 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
-      "@hooks/*": ["./src/hooks/*"],
+      "@hooks/*": ["src/lib/constants/hooks/*"],
       "@services/*": ["./src/services/*"],
       "@types/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"],
