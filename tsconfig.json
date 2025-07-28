@@ -17,15 +17,15 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@components/*": ["./src/components/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@hooks/*": ["src/lib/constants/hooks/*"],
-      "@services/*": ["./src/services/*"],
-      "@types/*": ["./src/types/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@context/*": ["./src/context/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@hooks/*": ["src/lib/hooks/*"],
+      "@services/*": ["src/services/*"],
+      "@types/*": ["src/types/*"],
+      "@utils/*": ["src/lib/utils/*"],
+      "@context/*": ["src/context/*"],
+      "@styles/*": ["src/styles/*"]
     }
   },
   "include": ["src"],

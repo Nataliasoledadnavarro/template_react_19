@@ -1,17 +1,16 @@
-import type { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import styles from './MainLayout.module.css'
 
-interface MainLayoutProps {
-  children: ReactNode
+type Props = {
+  children: React.ReactNode
 }
 
-const MainLayout = ({ children }: MainLayoutProps) => {
+const MainLayout = ({ children }: Props) => {
   return (
     <div className={styles.layout}>
       <Header />
-      <main className={styles.main}>{children}</main>
+      <main className={styles.content}>{children}</main>
       <Footer />
     </div>
   )
